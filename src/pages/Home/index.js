@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import Styles from './style'
-import Sidebar from '../../components/Sidebar'
+import {
+  Button,
+  Sidebar
+} from '../../components'
 
 const Home = () => {
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div style={{ display: 'flex', flexDirection: 'row', minHeight: '100%' }}>
       <Sidebar show={showSidebar} />
       <div style={ Styles.container }>
-        <button onClick={ () => { setShowSidebar(!showSidebar) }}>TOGGLE SIDEBAR</button>
+        <Button onClick={ () => { setShowSidebar(!showSidebar) }}>TOGGLE SIDEBAR</Button>
         This is home page.
       </div>
     </div>
