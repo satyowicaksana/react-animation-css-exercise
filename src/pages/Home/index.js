@@ -12,7 +12,10 @@ const Home = () => {
       <Sidebar show={showSidebar} />
       <div style={ Styles.container }>
         <Button onClick={ () => { setShowSidebar(!showSidebar) }}>TOGGLE SIDEBAR</Button>
-        This is home page.
+        <div style={ Styles.homeCard } >
+          <p style={ Styles.homeText }>This sentence is styled using global styles function.</p>
+          <p>This card styled using global styles object.</p>
+        </div>
       </div>
     </div>
   )
